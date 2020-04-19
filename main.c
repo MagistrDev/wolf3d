@@ -4,7 +4,7 @@
 #include <pthread.h>
 #include <fcntl.h>
 //#include <iostream>
-
+// gcc main.c -I./include -L./lib -lmingw32 -lSDL2main -lSDL2 -pthread
 #include "SDL2/SDL.h"
 
 const int WIDTH = 800, HEIGHT = 600;
