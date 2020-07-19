@@ -17,14 +17,28 @@
 # include <stdlib.h>
 # include <pthread.h>
 # include <fcntl.h>
-#include "SDL2/SDL.h"
+# include <math.h>
+# include "SDL2/SDL.h"
+# include "libft.h"
+
+typedef struct s_player
+{
+	float	x;
+	float	y;
+	float	a;
+	float	c;
+	float	cur_x;
+	float	cur_y;
+}				t_player;
 
 typedef struct s_map
 {
-	SDL_Surface	*sss;
-	char		map[512];
+	SDL_Surface	*scr;
+	char		map[1000];
 	int			w;
 	int			h;
+	int			sq_w;
+	int			sq_h;
 }				t_map;
 
 
@@ -37,6 +51,7 @@ typedef struct	s_window
 	int			width;
 	int			height;
 	t_map		map;
+	t_player	player;
 
 }				t_window;
 

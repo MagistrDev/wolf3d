@@ -8,7 +8,7 @@
 			"name": "gcc.exe - Сборка и отладка активного файла",
 			"type": "cppdbg",
 			"request": "launch",
-			"program": "${workspaceFolder}/a.exe",
+			"program": "${workspaceFolder}/wolf.exe",
 			"args": [],
 			"stopAtEntry": false,
 			"cwd": "${workspaceFolder}",
