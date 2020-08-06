@@ -46,6 +46,9 @@ typedef struct	s_window
 {
 	SDL_Window	*window;
 	SDL_Surface	*scr;
+	SDL_Surface	*scrm;
+	SDL_Surface	*scr3d;
+	SDL_Rect	maprect;
 	SDL_Event	windowEvent;
 	//char		capture[11] = "Hello World";
 	int			width;

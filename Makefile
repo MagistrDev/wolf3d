@@ -1,6 +1,6 @@
 NAME = wolf
 CC = gcc
-FLAGS = -Wall -Wextra -Werror
+FLAGS = -Wall -Wextra -Werror -g
 LIBFT = -I./libft -L./libft -lft
 LIBS = -lm -pthread
 INCLUDES = -I./include

@@ -33,7 +33,7 @@ void	read_map(t_window *win)
 					"0        0     0"\
 					"0     0000     0"\
 					"0              0"\
-					"0              0"\
+					"0        0000000"\
 					"0              0"\
 					"0      0       0"\
 					"0              0"\
@@ -73,7 +73,7 @@ void draw_rectangle(t_window *win, int x, int y, int rgba)
 
 	for (h = 0; h < win->map.sq_h; h++)
 		for (w = 0; w < win->map.sq_w; w++)
-			put_pixel(win->scr,x + w, y + h, rgba);
+			put_pixel(win->scrm,x + w, y + h, rgba);
 }
 
 void draw_wall(t_window *win)
@@ -94,61 +94,98 @@ void	draw_player(t_window *win)
 	float	y;
 	float	a;
 	int		*map;
-	
-	put_pixel(win->scr, win->player.x - 1, win->player.y - 1, 0xffffff);
-	put_pixel(win->scr, win->player.x - 1, win->player.y, 0xffffff);
-	put_pixel(win->scr, win->player.x - 1, win->player.y + 1, 0xffffff);
-	put_pixel(win->scr, win->player.x, win->player.y - 1, 0xffffff);
-	put_pixel(win->scr, win->player.x, win->player.y, 0xffffff);
-	put_pixel(win->scr, win->player.x, win->player.y + 1, 0xffffff);
-	put_pixel(win->scr, win->player.x + 1, win->player.y - 1, 0xffffff);
-	put_pixel(win->scr, win->player.x + 1, win->player.y, 0xffffff);
-	put_pixel(win->scr, win->player.x + 1, win->player.y + 1, 0xffffff);
-	map = win->scr->pixels;
+	SDL_Rect	colum = {.w = 1};
+	put_pixel(win->scrm, win->player.x - 1, win->player.y - 1, 0xffffff);
+	put_pixel(win->scrm, win->player.x - 1, win->player.y, 0xffffff);
+	put_pixel(win->scrm, win->player.x - 1, win->player.y + 1, 0xffffff);
+	put_pixel(win->scrm, win->player.x, win->player.y - 1, 0xffffff);
+	put_pixel(win->scrm, win->player.x, win->player.y, 0xffffff);
+	put_pixel(win->scrm, win->player.x, win->player.y + 1, 0xffffff);
+	put_pixel(win->scrm, win->player.x + 1, win->player.y - 1, 0xffffff);
+	put_pixel(win->scrm, win->player.x + 1, win->player.y, 0xffffff);
+	put_pixel(win->scrm, win->player.x + 1, win->player.y + 1, 0xffffff);
+	map = win->scrm->pixels;
 	a = win->player.a - 0.002 * 512 / 2;
 	// printf("\n0x%08X\n", map[]);
 	for (int i = 0; i < 512; i++)
 	{
-		for (c = 0; c < 300; c+=1.5) {
+		for (c = 0; ; c+=0.5) {
 			x = win->player.x + c*cos(a);
 			y = win->player.y + c*sin(a);
-			if (map[(int)x + (int)y * win->width] == 0xffff)
+			if (map[(int)x + (int)y * win->width] != 0x0 && map[(int)x + (int)y * win->width] != 0xffffff)
 				break;
-			put_pixel(win->scr, (int)x, (int)y, 0xffffff);
+			put_pixel(win->scrm, (int)x, (int)y, 0xffffff);
+			// if (fabs(win->player.a - a) <= 0.003)
+			// put_pixel(win->scrm, (int)x, (int)y, 0xff0000);
 		}
-		a += 0.002;
+		int	min = 0, max = 500;
+		(void)max;
+		(void)min;
+		int col;
+		col = 512 - (c / 725) * (max - min);
+		(void)col;
+		colum = (SDL_Rect){.w = 1, .h = col, .x = i, .y = 512/2 - col/2};
+		(void)colum;
+		SDL_FillRect(win->scr3d, &colum, 0xffff);
+		a += 0.001;
 	}
-	for (c = 0; c < 300; c+=1.5) {
-			x = win->player.x + c*cos(win->player.a);
-			y = win->player.y + c*sin(win->player.a);
-			if (map[(int)x + (int)y * win->width] == 0xffff)
-				break;
-			put_pixel(win->scr, (int)x, (int)y, 0xff0000);
-		}
+	// for (c = 0; c < 300; c+=1.5) {
+	// 		x = win->player.x + c*cos(win->player.a);
+	// 		y = win->player.y + c*sin(win->player.a);
+	// 		if (map[(int)x + (int)y * win->width] == 0xffff)
+	// 			break;
+		// }
+}
+
+void	draw_3d(t_window *win)
+{
+	(void)win;
 }
 
 void draw(t_window *win)
 {
+	SDL_Rect dstrect = {.w = 512, .h = 512, .x = 512, .y = 0};
 	read_map(win);
-	fill_background(win->scr);
+	// fill_background(win->scr);
+	SDL_FillRect(win->scrm, NULL, 0);
+	SDL_FillRect(win->scr3d, NULL, 0);
 	draw_wall(win);
 	draw_player(win);
+	// draw_3d(win);
+	SDL_BlitSurface(win->scrm, NULL, win->scr, NULL);
+	SDL_BlitSurface(win->scr3d, NULL, win->scr, &dstrect);
 	SDL_UpdateWindowSurface(win->window);
 }
 
 int		init(t_window *win)
 {
+	Uint32 rmask, gmask, bmask, amask;
+	// rmask = 0x000000ff;
+    // gmask = 0x0000ff00;
+    // bmask = 0x00ff0000;
+    // amask = 0xff000000;
+	rmask = 0x000000;
+    gmask = 0x000000;
+    bmask = 0x000000;
+    amask = 0x000000;
 	win->width = 512;
 	win->height = 512;
 	win->player.x = 80;
 	win->player.y = 80;
 	win->player.a = 1;
+	win->maprect.x = 0;
+	win->maprect.y = 0;
+	win->maprect.w = 512;
+	win->maprect.h = 512;
+
 	// read_map(win);
 	SDL_Init( SDL_INIT_EVERYTHING );
 	if ((win->window = SDL_CreateWindow( "Wolf", SDL_WINDOWPOS_UNDEFINED,\
-		SDL_WINDOWPOS_UNDEFINED, win->width, win->height, SDL_WINDOW_ALLOW_HIGHDPI)) == NULL)
+		SDL_WINDOWPOS_UNDEFINED, 1024, win->height, SDL_WINDOW_ALLOW_HIGHDPI)) == NULL)
 		return 1;
 	win->scr = SDL_GetWindowSurface(win->window);
+	win->scrm = SDL_CreateRGBSurface(0, win->width, win->height, 32, rmask, gmask, bmask, amask);
+	win->scr3d = SDL_CreateRGBSurface(0, win->width, win->height, 32, rmask, gmask, bmask, amask);
 	// fill_background(win->scr);
 	// draw_wall(win);
 	// draw_player(win);
@@ -177,7 +214,7 @@ void move_player(t_window *win, int move)
 		x = win->player.x + c*cos(win->player.a + M_PI);
 		y = win->player.y + c*sin(win->player.a + M_PI);
 	}
-	map = win->scr->pixels;
+	map = win->scrm->pixels;
 	if (map[(int)x + (int)y * win->width] != 0xffff)
 	{
 		win->player.x = x;
