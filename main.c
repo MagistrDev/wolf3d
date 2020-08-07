@@ -80,10 +80,12 @@ void draw_wall(t_window *win)
 {
 	int		i;
 	char	c;
+	int 	col_h;
 	for (i = 0; (c = win->map.map[i]); i++)
 	{
 		if (c == '0')
-			draw_rectangle(win,(i % win->map.w) * win->map.sq_w, (i / win->map.w) * win->map.sq_h ,0xffff);
+			col_h = win->height/
+			draw_rectangle(win,win->width/2 + i, win->height/2 -  ,0xffff);
 	}
 }
 
@@ -112,6 +114,7 @@ void	draw_player(t_window *win)
 		for (c = 0; ; c+=0.5) {
 			x = win->player.x + c*cos(a);
 			y = win->player.y + c*sin(a);
+			win->height =
 			if (map[(int)x + (int)y * win->width] != 0x0 && map[(int)x + (int)y * win->width] != 0xffffff)
 				break;
 			put_pixel(win->scrm, (int)x, (int)y, 0xffffff);

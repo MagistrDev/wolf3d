@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="Doom"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/dgruyere/projects/wolf3d/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/dgruyere/projects/wolf3d/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/dgruyere/projects/wolf3d/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Doom">
+				<Option output="/Users/dgruyere/projects/wolf3d/cmake-build-debug/Doom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dgruyere/projects/wolf3d/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/dgruyere/projects/wolf3d/Doom"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2/2.0.12_1/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_image/2.0.5/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_mixer/2.0.4/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_ttf/2.0.15/include/SDL2"/>
+					<Add directory="/Users/dgruyere/projects/wolf3d/include"/>
+					<Add directory="/Users/dgruyere/projects/wolf3d/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 Doom"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Doom/fast">
+				<Option output="/Users/dgruyere/projects/wolf3d/cmake-build-debug/Doom" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/dgruyere/projects/wolf3d/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/dgruyere/projects/wolf3d/Doom"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2/2.0.12_1/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_image/2.0.5/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_mixer/2.0.4/include/SDL2"/>
+					<Add directory="/Users/dgruyere/.brew/Cellar/sdl2_ttf/2.0.15/include/SDL2"/>
+					<Add directory="/Users/dgruyere/projects/wolf3d/include"/>
+					<Add directory="/Users/dgruyere/projects/wolf3d/libft"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/11.0.0/include"/>
+					<Add directory="/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 Doom/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/Users/dgruyere/projects/wolf3d/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_arrdel.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_atoi.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_bzero.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_isalnum.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_isalpha.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_isascii.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_isdigit.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_isprint.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_itoa.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstadd.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstdel.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstdelone.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstiter.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstmap.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstnew.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstpback.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_lstsize.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memalloc.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memccpy.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memchr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memcmp.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memcpy.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memdel.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memmove.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memrcpy.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_memset.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putchar.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putchar_fd.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putendl.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putendl_fd.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putnbr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putnbr_fd.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putstr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_putstr_fd.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_rstrlen.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_sqrt.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strcat.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strchr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strclr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strcmp.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strcpy.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strdel.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strdup.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strequ.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_striter.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_striteri.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strjoin.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strlcat.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strlen.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strmap.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strmapi.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strncat.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strncmp.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strncpy.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strnequ.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strnew.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strnstr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strrchr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strrev.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strskip.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strsplit.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strstr.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strsub.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_strtrim.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_tolower.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/ft_toupper.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/libft/get_next_line.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/main.c">
+			<Option target="Doom"/>
+		</Unit>
+		<Unit filename="/Users/dgruyere/projects/wolf3d/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

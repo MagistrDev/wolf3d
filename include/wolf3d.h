@@ -12,13 +12,13 @@
 
 #ifndef WOLF3D_H
 # define WOLF3D_H
-# include <windows.h>
+//# include <windows.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <pthread.h>
 # include <fcntl.h>
 # include <math.h>
-# include "SDL2/SDL.h"
+# include <SDL.h>
 # include "libft.h"
 
 typedef struct s_player
