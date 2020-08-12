@@ -107,14 +107,17 @@ void	draw_player(t_window *win)
 	map = win->scrm->pixels;
 	a = win->player.a - 0.002 * 512 / 2;
 	// printf("\n0x%08X\n", map[]);
-	for (int i = 0; i < 512; i++)
+	for (int i = 0; i < win->width; i++)
 	{
-		for (c = 0; ; c+=0.5) {
+		// float angle = win->player.a- win->player.fov / 2 + fov*i/(float)(win->width/2);
+		for (c = 0; ; c+=1.5) {
 			x = win->player.x + c*cos(a);
 			y = win->player.y + c*sin(a);
 			if (map[(int)x + (int)y * win->width] != 0x0 && map[(int)x + (int)y * win->width] != 0xffffff)
 				break;
-			put_pixel(win->scrm, (int)x, (int)y, 0xffffff);
+			int color = 0xffffff;
+			// color = ((int)(c / 500 * 255) & 0xff) + (((int)(c / 400 * 255) & 0xff) << 8) + (((int)(c / 400 * 255) & 0xff) << 16);
+			put_pixel(win->scrm, (int)x, (int)y, color);
 			// if (fabs(win->player.a - a) <= 0.003)
 			// put_pixel(win->scrm, (int)x, (int)y, 0xff0000);
 		}
@@ -122,12 +125,19 @@ void	draw_player(t_window *win)
 		(void)max;
 		(void)min;
 		int col;
-		col = 512 - (c / 725) * (max - min);
+		// col = 512 - (c / 725) * (max - min);
+		// col = win->height / c * 30;
+		col = (win->height / (c * cos(a - win->player.a)) * 30);
 		(void)col;
-		colum = (SDL_Rect){.w = 1, .h = col, .x = i, .y = 512/2 - col/2};
+		colum = (SDL_Rect){.w = 1, .h = col, .x = i, .y = win->height/2 - col/2};
 		(void)colum;
-		SDL_FillRect(win->scr3d, &colum, 0xffff);
-		a += 0.001;
+		int color;
+		// printf("%3.1f \t",c);
+		color = (255 / (c / 32) > 255) ? 255 : 255 / (c / 32);
+		// printf("%3.1f %d\t",c, color);
+		color = color + (color << 8);
+		SDL_FillRect(win->scr3d, &colum, color);
+		a += 0.002;
 	}
 	// for (c = 0; c < 300; c+=1.5) {
 	// 		x = win->player.x + c*cos(win->player.a);

@@ -29,6 +29,7 @@ typedef struct s_player
 	float	c;
 	float	cur_x;
 	float	cur_y;
+	float	fov;
 }				t_player;
 
 typedef struct s_map
@@ -58,5 +59,6 @@ typedef struct	s_window
 
 }				t_window;
 
+void	put_pixel(SDL_Surface *scr, int x, int y, int argb);
 
 #endif

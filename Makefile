@@ -2,11 +2,10 @@ NAME = wolf
 CC = gcc
 FLAGS = -Wall -Wextra -Werror -g
 LIBFT = -I./libft -L./libft -lft
-LIBS = -lm -pthread
-INCLUDES = -I./include
+LIBS = -lm 
+INCLUDES = -I./include -I./include/SDL2
 SDL = -L./lib -lmingw32 -lSDL2main -lSDL2
 SRCS = main.c 
-MINILIBX = -L/usr/local/lib/ -I/usr/local/include -framework OpenGL -framework AppKit -lmlx
 
 all: $(NAME)
 
